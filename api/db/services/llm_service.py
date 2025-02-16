@@ -228,7 +228,7 @@ class LLMBundle(object):
             tenant_id, llm_type, llm_name, lang=lang)
         assert self.mdl, "Can't find model for {}/{}/{}".format(
             tenant_id, llm_type, llm_name)
-        self.max_length = 8192
+        self.max_length = 60000
         for lm in LLMService.query(llm_name=llm_name):
             self.max_length = lm.max_tokens
             break
