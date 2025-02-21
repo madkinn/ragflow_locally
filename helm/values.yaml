@@ -66,6 +66,8 @@ ragflow:
   deployment:
     strategy:
     resources:
+      requests:
+        cpu: "12"
   service:
     # Use LoadBalancer to expose the web interface externally
     type: ClusterIP
@@ -80,6 +82,8 @@ infinity:
   deployment:
     strategy:
     resources:
+      requests:
+        cpu: "12"
   service:
     type: ClusterIP
 
@@ -92,7 +96,7 @@ elasticsearch:
     resources:
       requests:
         cpu: "12"
-        memory: "32Gi"
+        memory: "16Gi"
   service:
     type: ClusterIP
 
@@ -106,6 +110,8 @@ minio:
   deployment:
     strategy:
     resources:
+      requests:
+        cpu: "12"
   service:
     type: ClusterIP
 
@@ -119,6 +125,9 @@ mysql:
   deployment:
     strategy:
     resources:
+        requests:
+        cpu: "12"
+        memory: "16Gi"
   service:
     type: ClusterIP
 
@@ -132,6 +141,8 @@ redis:
   deployment:
     strategy:
     resources:
+      requests:
+        cpu: "12"
   service:
     type: ClusterIP
 

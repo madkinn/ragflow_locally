@@ -14,11 +14,12 @@ Released on February 6, 2025.
 ### New features
 
 - Supports DeepSeek R1 and DeepSeek V3.
-- GraphRAG refactor: Knowledge graph is dynamically built on an entire knowledge base (dataset) rather than on an individual file, and automatically updated when files are added or removed.
+- GraphRAG refactor: Knowledge graph is dynamically built on an entire knowledge base (dataset) rather than on an individual file, and automatically updated when files are added or removed. See [here](https://ragflow.io/docs/dev/construct_knowledge_graph).
 - Adds an **Iteration** agent component and a **Research report generator** agent template.
 - New UI language: Portuguese.
 - Allows setting metadata for a specific file in a knowledge base to support AI-powered chats.
 - Upgrades RAGFlow's document engine [Infinity](https://github.com/infiniflow/infinity) to v0.6.0.dev3.
+- Supports GPU acceleration for DeepDoc (see [docker-compose-gpu.yml](https://github.com/infiniflow/ragflow/blob/main/docker/docker-compose-gpu.yml)).
 - Supports creating and referencing a **Tag** knowledge base as a key milestone towards bridging the semantic gap between query and response.
 
 :::danger IMPORTANT
@@ -96,7 +97,7 @@ Released on December 18, 2024.
 
 ### Improvements
 
-- Upgrades the Document Layout Analysis model in Deepdoc.
+- Upgrades the Document Layout Analysis model in DeepDoc.
 - Significantly enhances the retrieval performance when using [Infinity](https://github.com/infiniflow/infinity) as document engine.
 
 ### Related APIs
@@ -269,7 +270,7 @@ Released on August 26, 2024.
 - Incorporates monitoring for the task executor.
 - Introduces Agent tools **GitHub**, **DeepL**, **BaiduFanyi**, **QWeather**, and **GoogleScholar**.
 - Supports chunking of EML files.
-- Supports more LLMs or model services: **GPT-4o-mini**, **PerfXCloud**, **TogetherAI**, **Upstage**, **Novita.AI**, **01.AI**, **SiliconFlow**, **XunFei Spark**, **Baidu Yiyan**, and **Tencent Hunyuan**.
+- Supports more LLMs or model services: **GPT-4o-mini**, **PerfXCloud**, **TogetherAI**, **Upstage**, **Novita.AI**, **01.AI**, **SiliconFlow**, **PPIO**, **XunFei Spark**, **Baidu Yiyan**, and **Tencent Hunyuan**.
 
 ## v0.9.0
 
